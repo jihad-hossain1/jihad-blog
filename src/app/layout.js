@@ -1,8 +1,14 @@
+// "use client";
 import { Root } from "postcss";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
+import Link from "next/link";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["100", "400", "500", "700"],
+  variable: "--font-roboto",
+});
 
 export const metadata = {
   title: "Jihad Blog",
@@ -12,15 +18,7 @@ export const metadata = {
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <nav>
-          <a href="">Home</a>
-        </nav>
-        {children}
-        <footer>
-          <a href="">Footer</a>
-        </footer>
-      </body>
+      <body className={`${roboto.className} font-roboto`}>{children}</body>
     </html>
   );
 };
