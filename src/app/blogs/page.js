@@ -1,4 +1,5 @@
-"use client";
+// "use client";
+import loadLogData from "@/utils/loadLogData";
 import Link from "next/link";
 // import { useRouter } from "next/navigation";
 // import { useRouter } from "next/router";
@@ -7,63 +8,35 @@ export const metadata = {
   description: "Learn Effective Programming",
 };
 
-const blogs = [
-  {
-    id: 1,
-    year: 2016,
-    title: "title 1",
-  },
-  {
-    id: 2,
-    year: 2016,
-    title: "title 2",
-  },
-  {
-    id: 3,
-    year: 2016,
-    title: "title 3",
-  },
-  {
-    id: 4,
-    year: 2016,
-    title: "title 4",
-  },
-  {
-    id: 5,
-    year: 2016,
-    title: "title 5",
-  },
-];
-const BlogPage = () => {
+
+const BlogPage = async () => {
   //   const router = useRouter();
+  const blogs = await loadLogData()
+  console.log(blogs)
   return (
     <div className="container mx-auto">
-      {blogs.map(({ id, year, title }) => (
-        <Link
+      {blogs.map(({ id, body, title }) => (
+        <div
           key={id}
-          href={{
-            pathname: `/blogs/${year}/${id}`,
-            query: {
-              title: title,
-            },
-          }}
-          className="block border border-cyan-500 my-2"
+          className="block border border-cyan-500 my-2 p-4"
         >
-          {title}
-        </Link>
-        // <button
-        //   key={id}
-        //   onClick={() => router.push(`/blogs/${year}/${id}?title=${title}`)}
-        //   //   href={{
-        //   //     pathname: `/blogs/${year}/${id}`,
-        //   //     query: {
-        //   //       title: title,
-        //   //     },
-        //   //   }}
-        //   className="block border border-cyan-500 my-2"
-        // >
-        //   {title}
-        // </button>
+          <h2 className="text-2xl">
+            {id}. {title}
+          </h2>
+          <p>
+            {body}
+          </p>
+          <Link
+            href={{
+              pathname: `/blogs/${id}`,
+
+            }}
+            className="inline-block mt-2 border border-sky-200 hover:border-0 shadow-sm hover:shadow px-1 py-0 rounded bg-sky-100 hover:bg-sky-200 hover:text-cyan-700"
+          >
+            Details
+          </Link>
+        </div>
+
       ))}
     </div>
   );
