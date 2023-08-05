@@ -1,0 +1,17 @@
+{
+  "categories": [
+    { "id": 1, "title": "json-server", "author": "typicode" },
+    { "id": 2, "title": "xml-server", "author": "another" },
+    { "id": 3, "title": "html-server", "author": "whatever" },
+    { "id": 4, "title": "node-server", "author": "nobody" },
+    { "id": 5, "title": "aws-server", "author": "anybody" }
+  ],
+  "products": [
+    { "id": 1, "body": "some comment", "postId": 5, "categoryId": 1  },
+    { "id": 2, "body": "some like", "postId": 3, "categoryId": 2 },
+    { "id": 3, "body": "some views", "postId": 4, "categoryId": 1  },
+    { "id": 4, "body": "some dislike", "postId": 2, "categoryId": 1  },
+    { "id": 5, "body": "some react", "postId": 1 , "categoryId": 2}
+  ],
+  "profile": { "name": "typicode" }
+}

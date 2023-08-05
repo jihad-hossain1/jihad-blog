@@ -1,12 +1,16 @@
 // import image1 from "@/app/assets/"
-import image1 from "@/app/assets/Mithai-Course.png";
-import Image from "next/image";
+
+import Categories from "@/components/HomePage/Categories";
+
+// import Categories from "@/components/HomePage/Categories";
+
 
 const HomePage = () => {
+
   return (
     <main>
       <h4>Homepage</h4>
-      <Image src={image1} alt="photo home"></Image>
+      <Categories></Categories>
     </main>
   );
 };
