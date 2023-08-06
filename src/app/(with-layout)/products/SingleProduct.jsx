@@ -2,10 +2,10 @@ import Link from "next/link";
 import React from "react";
 
 const SingleProduct = ({ product }) => {
-  const { id, body } = product;
+  const { id, title } = product;
   return (
     <div className="border inline-block border-cyan-200 shadow-sm px-1 rounded">
-      <Link href={`/products/${id}`}>{body}</Link>
+      <Link href={`/products/${id}`}>{title}</Link>
     </div>
   );
 };

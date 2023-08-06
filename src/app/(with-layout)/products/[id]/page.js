@@ -4,7 +4,7 @@ const SingleProduct = async ({ params }) => {
     const product = await getSingleProducts(params.id)
     return (
         <div>
-            {product?.body}
+            {product?.title}
         </div>
     );
 };

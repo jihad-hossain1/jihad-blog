@@ -1,6 +1,6 @@
 
 
-const gettAllProducts = async ({ categoryId }) => {
+const gettAllProducts = async (categoryId) => {
     let url = 'http://localhost:5000/products'
     if (categoryId) {
         url += '?categoryId' + categoryId;
