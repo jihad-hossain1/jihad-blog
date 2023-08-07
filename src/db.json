@@ -29,8 +29,8 @@
   "products": [
     {
       "id": 1,
-      "title": "Sony Xperia II",
-      "price": "345",
+      "title": "Sony Xperia III",
+      "price": "555",
       "categoryId": 1,
       "feature": [
         "4/64 varient",
@@ -40,7 +40,7 @@
     },
     {
       "id": 2,
-      "title": "Iphone 5",
+      "title": "Iphone 5 II",
       "price": "544",
       "categoryId": 2,
       "feature": [
@@ -52,7 +52,7 @@
     {
       "id": 4,
       "title": "Xiaomi note 11",
-      "price": "342",
+      "price": "555",
       "categoryId": 1,
       "feature": [
         "4/64 varient",
